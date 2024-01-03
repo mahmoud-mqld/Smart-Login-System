@@ -48,7 +48,8 @@ function signup() {
     resetForm(registerPassword, registerUsername, registerEmail);
     console.log("local ");
     console.log(JSON.parse(localStorage.getItem("users")));
-    location.href = "../login.html";
+      window.open("../login.html","_self"
+
   } else if (doesItemExist(registrs, registerEmail.value)) {
     alert("duplicate");
     mailAlert.innerText = "duplicate";
@@ -107,7 +108,8 @@ function login() {
       console.log(activUser);
       localStorage.setItem("active", activUser);
       console.log(localStorage.getItem("activ"));
-      location.href = "welcome.html";
+        window.open("welcome.html","_self"
+
       console.log(localStorage.getItem("activ"));
       // greet();
     }
@@ -133,7 +135,7 @@ function login() {
 
 
 function signOut(){
-  location.href="login.html"
+  window.open("login.html","_self"
   
   
 }
